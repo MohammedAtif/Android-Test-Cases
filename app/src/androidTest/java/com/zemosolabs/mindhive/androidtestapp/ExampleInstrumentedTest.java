@@ -36,6 +36,8 @@ public class ExampleInstrumentedTest {
     @Test
     public void testMainActivityComponents() throws Exception {
         MainActivity mainActivity = mainActivityTestRule.getActivity();
+
+        //checking the views
         View welcomeViewRaw  = mainActivity.findViewById(R.id.welcome_content);
         assertThat(welcomeViewRaw, notNullValue());
         assertThat(welcomeViewRaw, instanceOf(TextView.class));
