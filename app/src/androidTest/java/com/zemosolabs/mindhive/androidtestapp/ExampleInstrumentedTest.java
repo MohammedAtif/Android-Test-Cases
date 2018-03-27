@@ -40,6 +40,8 @@ public class ExampleInstrumentedTest {
         assertThat(welcomeViewRaw, notNullValue());
         assertThat(welcomeViewRaw, instanceOf(TextView.class));
         TextView welcomeView = (TextView) welcomeViewRaw;
+
+        //checking the strings
         String text = mainActivity.getResources().getString(R.string.large_text);
         assertEquals("Checking the content", welcomeView.getText().toString(), text);
     }
